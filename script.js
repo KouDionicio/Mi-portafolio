@@ -1,27 +1,8 @@
-/* =========================================================
-   Portafolio personal - script.js
-   - Datos de proyectos (edítalos aquí)
-   - Render de tarjetas y diálogo de detalles
-   - Menú móvil, enlace activo, animaciones de entrada
-   ========================================================= */
 
-/* ---------- 1. Datos de proyectos ----------
-   Cada proyecto tiene:
-   - name, area, summary: textos de la tarjeta
-   - description, role, activities, tech: contenido del detalle
-   - evidence: lista de capturas reales (src = ruta de la imagen, caption = descripción)
-   - cover: imagen de la tarjeta y de la parte superior del detalle
-   - repoUrl (opcional): enlace al repositorio de GitHub; repoNote: aclaración de participación
-   - pendingNote (opcional): nota que aparece en la sección de evidencias
-   Los textos que empiezan con "Pendiente" se muestran como campos por completar.
-*/
 const PLACEHOLDER_IMG = "assets/placeholder.svg";
 
-/* Enlaces de repositorio: reemplaza el texto entre comillas por tu enlace de GitHub,
-   por ejemplo "https://github.com/tu-usuario/vitalmind-plus".
-   Mientras siga el texto de ejemplo, el botón "Ver repositorio" aparece deshabilitado. */
-const REPO_VITALMIND = "[AQUÍ AGREGARÉ EL ENLACE]";
-const REPO_MEDALERT = "[AQUÍ AGREGARÉ EL ENLACE]";
+const REPO_VITALMIND = "https://github.com/KouDionicio/9A-IDGS-ECBD-VitalMind-";
+const REPO_MEDALERT = "https://github.com/yaz-gutzz/MedAlert";
 
 const projects = [
   {
@@ -93,7 +74,7 @@ const projects = [
     evidence: [],
     pendingNote:
       "Este proyecto se presenta con una ilustración porque no incluye capturas del sistema. Si más adelante tienes capturas autorizadas, agrégalas en assets/vitalmind-plus/ y en este archivo.",
-    repoUrl: "https://github.com/KouDionicio/9A-IDGS-ECBD-VitalMind-.git",
+    repoUrl: REPO_VITALMIND,
     repoNote:
       "El repositorio corresponde al proyecto completo del equipo. Mi participación se centró en las pruebas de backend e integración, el seguimiento de errores y la documentación de resultados.",
   },
@@ -115,7 +96,7 @@ const projects = [
     evidence: [],
     pendingNote:
       "Sección en preparación: aquí podrás agregar capturas de pantalla, detalles técnicos y más información del proyecto.",
-    repoUrl: "https://github.com/yaz-gutzz/MedAlert.git",
+    repoUrl: REPO_MEDALERT,
     repoNote:
       "El repositorio corresponde al proyecto universitario del equipo. Mi participación se centró en el backend, la base de datos y la organización de la información del sistema.",
   },
@@ -301,7 +282,10 @@ function openProject(project) {
   if (project.pendingNote) {
     evidenceBlock.append(createEl("p", "pending-note", project.pendingNote));
   }
-  dialogContent.append(createSection("Evidencias visuales", evidenceBlock));
+  // Solo se muestra la sección si el proyecto tiene capturas
+  if (project.evidence.length > 0) {
+    dialogContent.append(createSection("Evidencias visuales", evidenceBlock));
+  }
 
   // Abrir el diálogo
   if (typeof dialog.showModal === "function") {
@@ -377,9 +361,6 @@ function setupReveal() {
   revealElements.forEach((el) => revealObserver.observe(el));
 }
 
-/* ---------- 9. Contacto pendiente ----------
-   Mientras un enlace de contacto esté marcado como pendiente,
-   evitamos que navegue a "#". */
 document.querySelectorAll('.contact-card[aria-disabled="true"]').forEach((card) => {
   card.addEventListener("click", (event) => event.preventDefault());
 });
