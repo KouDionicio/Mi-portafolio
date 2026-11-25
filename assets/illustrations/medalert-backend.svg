@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Ilustración abstracta de backend y base de datos">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08121f"/>
+      <stop offset="1" stop-color="#15283f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4fc3b3" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#4fc3b3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4fc3b3" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#17796e" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="800" cy="450" r="460" fill="url(#glow)"/>
+
+  <!-- Conexiones entre nodos -->
+  <g stroke="#b7c4d2" stroke-opacity="0.35" stroke-width="3" fill="none">
+    <path d="M360 300 C 520 300, 560 450, 720 450"/>
+    <path d="M360 600 C 520 600, 560 450, 720 450"/>
+    <path d="M720 450 C 880 450, 920 320, 1080 320"/>
+    <path d="M720 450 C 880 450, 920 580, 1080 580"/>
+    <path d="M1080 320 L 1240 450"/>
+    <path d="M1080 580 L 1240 450"/>
+  </g>
+
+  <!-- Nodos de servicio (backend) -->
+  <g>
+    <circle cx="360" cy="300" r="46" fill="#15283f" stroke="#4fc3b3" stroke-width="4"/>
+    <circle cx="360" cy="300" r="14" fill="#4fc3b3"/>
+    <circle cx="360" cy="600" r="46" fill="#15283f" stroke="#4fc3b3" stroke-width="4"/>
+    <circle cx="360" cy="600" r="14" fill="#4fc3b3"/>
+    <circle cx="1080" cy="320" r="46" fill="#15283f" stroke="#b7c4d2" stroke-opacity="0.6" stroke-width="4"/>
+    <circle cx="1080" cy="320" r="14" fill="#b7c4d2" fill-opacity="0.8"/>
+    <circle cx="1080" cy="580" r="46" fill="#15283f" stroke="#b7c4d2" stroke-opacity="0.6" stroke-width="4"/>
+    <circle cx="1080" cy="580" r="14" fill="#b7c4d2" fill-opacity="0.8"/>
+  </g>
+
+  <!-- Nodo central -->
+  <circle cx="720" cy="450" r="70" fill="#0d1b2e" stroke="#4fc3b3" stroke-width="5"/>
+  <circle cx="720" cy="450" r="30" fill="#4fc3b3"/>
+
+  <!-- Base de datos (cilindros apilados) -->
+  <g transform="translate(1240 450)">
+    <ellipse cx="0" cy="-70" rx="90" ry="22" fill="#4fc3b3" fill-opacity="0.9"/>
+    <rect x="-90" y="-70" width="180" height="140" fill="url(#cyl)"/>
+    <ellipse cx="0" cy="70" rx="90" ry="22" fill="#17796e"/>
+    <path d="M-90 -10 Q 0 6 90 -10" fill="none" stroke="#08121f" stroke-opacity="0.35" stroke-width="3"/>
+    <path d="M-90 30 Q 0 46 90 30" fill="none" stroke="#08121f" stroke-opacity="0.35" stroke-width="3"/>
+  </g>
+
+  <!-- Ventana de código abstracta (sin texto real) -->
+  <rect x="200" y="140" width="260" height="130" rx="18" fill="#ffffff" fill-opacity="0.04" stroke="#b7c4d2" stroke-opacity="0.25" stroke-width="2"/>
+  <rect x="228" y="172" width="120" height="10" rx="5" fill="#4fc3b3" fill-opacity="0.7"/>
+  <rect x="228" y="200" width="190" height="10" rx="5" fill="#b7c4d2" fill-opacity="0.35"/>
+  <rect x="228" y="228" width="150" height="10" rx="5" fill="#b7c4d2" fill-opacity="0.25"/>
+
+  <!-- Tabla abstracta -->
+  <rect x="1130" y="700" width="260" height="120" rx="18" fill="#ffffff" fill-opacity="0.04" stroke="#b7c4d2" stroke-opacity="0.25" stroke-width="2"/>
+  <g fill="#b7c4d2" fill-opacity="0.3">
+    <rect x="1156" y="728" width="80" height="10" rx="5"/>
+    <rect x="1256" y="728" width="80" height="10" rx="5"/>
+    <rect x="1156" y="756" width="80" height="10" rx="5"/>
+    <rect x="1256" y="756" width="80" height="10" rx="5"/>
+  </g>
+
+  <!-- Acentos de estado -->
+  <circle cx="1330" cy="180" r="12" fill="#4fc3b3"/>
+  <circle cx="1370" cy="180" r="12" fill="#b7c4d2" fill-opacity="0.35"/>
+  <circle cx="1410" cy="180" r="12" fill="#b7c4d2" fill-opacity="0.2"/>
+</svg>

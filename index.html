@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Tu Nombre, estudiante de Ingeniería en Desarrollo y Gestión de Software enfocada en desarrollo web, backend y bases de datos.">
+  <title>Tu Nombre | Portafolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- ===== Encabezado y navegación ===== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <!-- Reemplaza "TN" por tus iniciales -->
+      <a href="#inicio" class="logo" aria-label="Ir al inicio">TN<span>.</span></a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Inicio ===== -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow reveal">Estudiante de Ingeniería en Desarrollo y Gestión de Software</p>
+        <!-- Reemplaza "Tu Nombre" por tu nombre -->
+        <h1 class="reveal">Hola, soy <span class="accent">Citlalli</span>.</h1>
+        <p class="lead reveal">
+          Me interesa el desarrollo web, las tecnologías y la creación de soluciones digitales.
+          Estoy en formación y aprendo participando en proyectos académicos y reales.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn-ghost" href="#contacto">Contactarme</a>
+        </div>
+      </div>
+      <div class="hero-orb" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== Sobre mí ===== -->
+    <section id="sobre-mi" class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">Sobre mí</span>
+          <h2 class="section-title">Aprendiendo a construir software</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Soy estudiante de Ingeniería en Desarrollo y Gestión de Software. Durante mi formación
+              he trabajado en proyectos de desarrollo web, backend, bases de datos, pruebas de software
+              y personalización de sitios web.
+            </p>
+            <p>
+              He tenido la oportunidad de participar en proyectos durante mi estadía y en proyectos
+              académicos. En ellos trabajé en distintas áreas, aprendí a colaborar en equipo y reforcé
+              mis conocimientos técnicos.
+            </p>
+            <p>
+              Quiero seguir aprendiendo, adquirir experiencia en un entorno profesional y mejorar mis
+              habilidades en el desarrollo de software.
+            </p>
+          </div>
+
+          <dl class="facts reveal">
+            <div class="fact">
+              <dt>Formación</dt>
+              <dd>Ingeniería en Desarrollo y Gestión de Software</dd>
+            </div>
+            <div class="fact">
+              <dt>Áreas de interés</dt>
+              <dd>Desarrollo web, backend, bases de datos y QA</dd>
+            </div>
+            <div class="fact">
+              <dt>Objetivo</dt>
+              <dd>Estadía o prácticas profesionales en desarrollo</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Habilidades ===== -->
+    <section id="habilidades" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">Habilidades</span>
+          <h2 class="section-title">Tecnologías que he usado o estudiado</h2>
+          <p class="section-lead">Organizadas por área. Todas son conocimientos que he trabajado o estudiado, sin niveles inventados.</p>
+        </header>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <h3>Desarrollo web</h3>
+            <ul class="chips">
+              <li class="chip">HTML</li>
+              <li class="chip">CSS</li>
+              <li class="chip">JavaScript</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Lenguajes y backend</h3>
+            <ul class="chips">
+              <li class="chip">Java</li>
+              <li class="chip">Python</li>
+              <li class="chip">Backend</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Bases de datos</h3>
+            <ul class="chips">
+              <li class="chip">MySQL</li>
+              <li class="chip">MongoDB</li>
+              <li class="chip">Diseño y gestión de datos</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>WordPress</h3>
+            <ul class="chips">
+              <li class="chip">WordPress</li>
+              <li class="chip">Avada</li>
+              <li class="chip">Personalización de sitios</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Calidad y herramientas</h3>
+            <ul class="chips">
+              <li class="chip">QA y pruebas de software</li>
+              <li class="chip">Git y GitHub</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Proyectos ===== -->
+    <section id="proyectos" class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">Proyectos</span>
+          <h2 class="section-title">Trabajo académico y experiencia real</h2>
+          <p class="section-lead">Cada proyecto indica con claridad mi participación, el área en la que trabajé y las herramientas que usé.</p>
+        </header>
+
+        <!-- Las tarjetas se generan desde script.js (arreglo "projects") -->
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section id="contacto" class="section section-contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">Contacto</span>
+          <h2 class="section-title">Hablemos</h2>
+          <p class="section-lead">Estoy abierta a oportunidades de estadía o prácticas profesionales en desarrollo web y software.</p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Cuando tengas tu correo, cambia href="#" por "mailto:tu-correo@ejemplo.com" y quita is-pending y aria-disabled -->
+          <a class="contact-card is-pending" href="#" aria-disabled="true">
+            <span class="contact-label">Correo electrónico</span>
+            <span class="contact-value placeholder">Pendiente: agrega tu correo</span>
+          </a>
+
+          <!-- Cuando tengas tu perfil, cambia href="#" por la URL de GitHub -->
+          <a class="contact-card is-pending" href="#" aria-disabled="true">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value placeholder">Pendiente: agrega tu perfil</span>
+          </a>
+
+          <!-- Agrega tu LinkedIn cuando lo tengas -->
+          <a class="contact-card is-pending" href="#" aria-disabled="true">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value placeholder">Pendiente: agrega tu perfil</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Citlalli. Hecho con HTML, CSS y JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Diálogo con detalles del proyecto ===== -->
+  <dialog class="project-dialog" id="project-dialog" aria-label="Detalles del proyecto">
+    <button class="dialog-close" id="dialog-close" type="button" aria-label="Cerrar detalles">&times;</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+</body>
+</html>
